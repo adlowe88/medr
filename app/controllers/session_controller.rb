@@ -3,21 +3,22 @@ class SessionController < ApplicationController
   end
 
   def create
+    #Is the email being entered a patient or a doctor?
     patient = Patient.find_by :email => params[:email]
-    if patient.present? && patient.authenticate(params[:password_digest])
+    doctor = Doctor.find_by :email => params[:email]
+
+    #If there is a patient present, check password
+    if patient.present? && patient.authenticate(params[:password])
       session[:patient_id] = patient.id
       # if login successful redirect to patient home page
       redirect_to home_patients_path
-    else
-      redirect_to login_path
-    end
-
-    doctor = Doctor.find_by :email => params[:email]
-    if doctor.present? && doctor.authenticate(params[:password_digest])
-      session[:doctor] = doctor.id
+    #If there is a doctor present, check password
+    elsif doctor.present? && doctor.authenticate(params[:password])
+      session[:doctor_id] = doctor.id
       # if login successful redirect to doctor home page
       redirect_to home_doctors_path
     else
+      #Otherwise prompt login again
       redirect_to login_path
     end
   end

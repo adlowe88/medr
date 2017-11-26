@@ -13,6 +13,10 @@ class DoctorsController < ApplicationController
     end
   end
 
+  def edit
+    @doctor = Doctor.find params[:doctor_id]
+  end
+
   def home
   end
 
@@ -20,9 +24,12 @@ class DoctorsController < ApplicationController
   end
 
   def pending_requests
+
   end
 
   def account_settings
+    @doctor = Doctor.find_by :id => session[:doctor_id]
+    # raise "hell"
   end
 
   def doctor_params

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
 
-  resources :patients, :only => [:new, :create] do
+  resources :patients, :only => [:new, :create, :edit] do
     collection do
       get 'home', :to => "patients/home"
       get 'check_referral', :to => "patients/check_referral"
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
 
-  resources :doctors, :only => [:new, :create] do
+  resources :doctors, :only => [:new, :create, :edit] do
     collection do
       get 'home', :to => "doctors/home"
       get 'create_referral', :to => "doctors/create_referral"

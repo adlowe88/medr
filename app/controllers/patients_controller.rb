@@ -14,7 +14,6 @@ class PatientsController < ApplicationController
 
   end
 
-
   def home
     @patient = Patient.find_by :id => session[:patient_id]
   end
@@ -26,6 +25,7 @@ class PatientsController < ApplicationController
   end
 
   def account_settings
+    @patient = Patient.find_by :id => session[:patient_id]
   end
 
   private

@@ -1,1 +1,35 @@
 <h1>Change you ACCOUNT SETTINGS DOC ?</h1>
+
+<%= form_for @doctor do | f | %>
+
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :provider_number%>
+    <%= f.text_field :provider_number%>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :phone%>
+    <%= f.text_field :phone %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :dob%>
+    <%= f.text_field :dob %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :email %>
+    <%= f.text_field :email%>
+  </fieldset>
+
+<% end %>
