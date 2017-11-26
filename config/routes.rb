@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     collection do
       get 'home', :to => "doctors/home"
       get 'create_referral', :to => "doctors/create_referral"
-      get 'incoming_requests', :to => "doctors/incoming_requests"
+      get 'pending_requests', :to => "doctors/pending_requests"
       get 'account_settings', :to => "doctors/account_settings"
     end
   end

@@ -19,7 +19,7 @@ class DoctorsController < ApplicationController
   def create_referral
   end
 
-  def incoming_requests
+  def pending_requests
   end
 
   def account_settings
