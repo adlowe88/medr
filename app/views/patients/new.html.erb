@@ -1,0 +1,21 @@
+<h1>This is the sign-up page if you are a NEW PATIENT</h1>
+<% if @patient.errors.any? %>
+  <ol>
+    <% @patient.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+<%= form_for @patient do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit "New Patient" %>
+<% end %>
