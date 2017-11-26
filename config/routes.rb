@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :patients, :only => [:new, :create] do
     collection do
       get 'home', :to => "patients/home"
+      get 'check_referral', :to => "patients/check_referral"
+      get 'pending_requests', :to => "patients/pending_requests"
+      get 'account_settings', :to => "patients/account_settings"
     end
   end
 

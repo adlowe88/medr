@@ -1,7 +1,8 @@
 <h1>This is the PATIENT HOME PAGE</h1>
 
 <nav>
-  <%= link_to "Your Referrals"%>
-  <%= link_to "Pending Requests"%>
-  <%= link_to "Account Settings"%>
+  <%= link_to "Return home Doc!", home_patients_path%>
+  <%= link_to "Your Referrals", check_referral_patients_path %>
+  <%= link_to "Pending Requests", pending_requests_patients_path%>
+  <%= link_to "Account Settings", account_settings_patients_path%>
 </nav>

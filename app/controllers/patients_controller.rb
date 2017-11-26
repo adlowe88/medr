@@ -19,6 +19,15 @@ class PatientsController < ApplicationController
     @patient = Patient.find_by :id => session[:patient_id]
   end
 
+  def check_referral
+  end
+
+  def pending_requests
+  end
+
+  def account_settings
+  end
+
   private
   def patient_params
     params.require(:patient).permit(:email, :password_digest, :password_digest_confirmation)
