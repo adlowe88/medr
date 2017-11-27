@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125012138) do
+ActiveRecord::Schema.define(version: 20171127231858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(version: 20171125012138) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "patient_id"
+    t.integer "referrer_id"
+    t.integer "referee_id"
   end
 
 end

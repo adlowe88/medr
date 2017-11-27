@@ -2,6 +2,7 @@
 
 <%= form_for @referral, url: {action: "create"} do | f | %>
 
+  Recipient:
   <%= f.collection_select(:referee_id, Doctor.all, :id, :name) %>
 
   <fieldset>
@@ -10,17 +11,6 @@
     <%= f.text_field :time%>
   </fieldset>
 
-  <fieldset>
-    From:
-    <%= f.label :doctor_id %>
-    <%= f.select :doctor_ids, Doctor.pluck(:name, :id), :include_blank => true %>
-  </fieldset>
-
-  <fieldset>
-    To:
-    <%= f.label :doctor_id %>
-    <%= f.select :doctor_ids, Doctor.pluck(:name, :id), :include_blank => true %>
-  </fieldset>
 
   <fieldset>
     For:

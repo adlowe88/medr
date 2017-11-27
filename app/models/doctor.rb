@@ -16,8 +16,6 @@
 
 class Doctor < ApplicationRecord
   has_secure_password
-
-  has_and_belongs_to_many :referrals, :optional => true
   has_and_belongs_to_many :hospitals, :optional => true
 
   has_many :sent_referrals, class_name: "Referral", foreign_key: "referrer_id"

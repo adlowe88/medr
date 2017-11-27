@@ -4,7 +4,7 @@ class DoctorsController < ApplicationController
   end
 
   def create
-    @doctor = Doctor.new doctor_params
+    @doctor = Doctor.new (doctor_params)
     # raise 'hell'
     if @doctor.save
       redirect_to doctor_path(session[:doctor_id])
