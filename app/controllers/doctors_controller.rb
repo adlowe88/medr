@@ -39,6 +39,7 @@ class DoctorsController < ApplicationController
   # end
 
   def create_referral
+    
   end
 
   def pending_requests
