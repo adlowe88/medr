@@ -37,11 +37,6 @@ class DoctorsController < ApplicationController
 
   # def home
   # end
-
-  def create_referral
-    
-  end
-
   def pending_requests
 
   end
@@ -51,6 +46,7 @@ class DoctorsController < ApplicationController
     # raise "hell"
   end
 
+  private
   def doctor_params
     params.require(:doctor).permit(:email, :name, :provider_number, :phone, :dob, :address,:password, :passord_digest, :password_digest_confirmation)
   end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
 
+#if someone makes a get request from patient/referrals#forpatient
+
   resources :patients do
     collection do
       # get 'home', :to => "patients/home"
@@ -8,7 +10,6 @@ Rails.application.routes.draw do
       get 'pending_requests', :to => "patients/pending_requests"
       get 'account_settings', :to => "patients/account_settings"
     end
-    resources :referrals
   end
 
 

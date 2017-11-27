@@ -10,7 +10,33 @@
 
 
   <body>
-    <%= yield :doctors_home%>
+
     <%= yield %>
+    <!-- <%= yield :doctors_home%> -->
+    <main class="wrapper">
+      <section class="section parallax bg1">
+        <nav class="home-nav">
+          <h3>Welcome to MeDr</h3>
+          <%= link_to 'Home', root_path %>
+          <%= link_to 'Patient Sign Up', new_patient_path%>
+          <%= link_to 'Doctor Sign Up', new_doctor_path%>
+          <%= link_to 'Sign In', login_path %>
+          <!-- <%= link_to 'Sign Out', login_path, :method => 'delete' %> -->
+        </nav>
+      </section>
+
+      <section class="section static">
+        <h1>Boring</h1>
+      </section>
+
+      <section class="section parallax bg2">
+        <h1>SO FLUFFY AWWW</hi>
+      </section>
+</main>
+
+
+
+
+
   </body>
 </html>

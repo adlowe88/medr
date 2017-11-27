@@ -27,9 +27,6 @@ class PatientsController < ApplicationController
   #   @patient = Patient.find_by :id => session[:patient_id]
   # end
 
-  def check_referral
-  end
-
   def pending_requests
   end
 

@@ -3,7 +3,7 @@
 <nav>
   <%= link_to "Return home Doc!", doctor_path %>
   <%= link_to "Create Referral", new_doctor_referral_path(session[:doctor_id])%>
-  <%= link_to "Pending Requests", pending_requests_doctors_path %>
+  <%= link_to "Referrals List", doctor_referrals_path(session[:doctor_id]) %>
   <%= link_to "Account Settings", account_settings_doctors_path%>
   <%= link_to 'Sign Out', login_path, :method => 'delete' %>
 </nav>
