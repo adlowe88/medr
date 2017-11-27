@@ -6,7 +6,6 @@ class SessionController < ApplicationController
     #Is the email being entered a patient or a doctor?
     patient = Patient.find_by :email => params[:email]
     doctor = Doctor.find_by :email => params[:email]
-
     #If there is a patient present, check password
     if patient.present? && patient.authenticate(params[:password])
       session[:patient_id] = patient.id

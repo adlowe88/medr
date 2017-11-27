@@ -5,9 +5,9 @@ class DoctorsController < ApplicationController
 
   def create
     @doctor = Doctor.new doctor_params
-
+    # raise 'hell'
     if @doctor.save
-      redirect_to root_path
+      redirect_to doctor_path(session[:doctor_id])
     else
       render :new
     end
@@ -51,6 +51,6 @@ class DoctorsController < ApplicationController
   end
 
   def doctor_params
-    params.require(:doctor).permit(:email, :name, :provider_number, :phone, :dob, :address, :passord_digest, :password_digest_confirmation)
+    params.require(:doctor).permit(:email, :name, :provider_number, :phone, :dob, :address,:password, :passord_digest, :password_digest_confirmation)
   end
 end

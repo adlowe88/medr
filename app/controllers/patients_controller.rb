@@ -7,7 +7,7 @@ class PatientsController < ApplicationController
     @patient = Patient.new patient_params
 
     if @patient.save
-      redirect_to root_path
+      redirect_to patient_path(session[:patient_id])
     else
       render :new
     end
@@ -39,7 +39,7 @@ class PatientsController < ApplicationController
 
   private
   def patient_params
-    params.require(:patient).permit(:name, :dob, :phone, :address, :medicare, :health_fund, :email, :password_digest, :password_digest_confirmation)
+    params.require(:patient).permit(:name, :dob, :phone, :address, :medicare, :health_fund, :email, :password, :password_digest, :password_digest_confirmation)
   end
 
 end

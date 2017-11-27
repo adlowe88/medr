@@ -5,5 +5,5 @@
   <%= link_to "Create Referral", create_referral_doctors_path%>
   <%= link_to "Pending Requests", pending_requests_doctors_path %>
   <%= link_to "Account Settings", account_settings_doctors_path%>
-  <%= link_to "Sign Out" %>
+  <%= link_to 'Sign Out', login_path, :method => 'delete' %>
 </nav>

@@ -1,9 +1,9 @@
 <h1>This is the PATIENT HOME PAGE</h1>
 
 <nav>
-  <%= link_to "Return home Doc!", patient_path%>
+  <%= link_to "Return home!", patient_path%>
   <%= link_to "Your Referrals", check_referral_patients_path %>
   <%= link_to "Pending Requests", pending_requests_patients_path%>
   <%= link_to "Account Settings", account_settings_patients_path%>
-  <%= link_to "Sign Out" %>
+  <%= link_to 'Sign Out', login_path, :method => 'delete' %>
 </nav>
