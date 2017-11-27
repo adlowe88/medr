@@ -37,4 +37,9 @@
     <%= f.text_field :email %>
   </fieldset>
 
+  <fieldset>
+    <%= f.submit %>
+  </fieldset>
 <% end %>
+
+<%= button_to 'Delete Account', patient_path(@patient.id), :method => 'delete' %>

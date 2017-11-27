@@ -1,31 +1,30 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
 
-  resources :patients, :only => [:new, :create, :edit] do
+  resources :patients do
     collection do
-      get 'home', :to => "patients/home"
+      # get 'home', :to => "patients/home"
       get 'check_referral', :to => "patients/check_referral"
       get 'pending_requests', :to => "patients/pending_requests"
       get 'account_settings', :to => "patients/account_settings"
     end
+    resources :referrals
   end
 
 
-  resources :doctors, :only => [:new, :create, :edit] do
+  resources :doctors do
     collection do
-      get 'home', :to => "doctors/home"
+      # get 'home', :to => "doctors/home"
+      # get 'show', :to => "doctors/home"
       get 'create_referral', :to => "doctors/create_referral"
       get 'pending_requests', :to => "doctors/pending_requests"
       get 'account_settings', :to => "doctors/account_settings"
     end
+    resources :referrals
   end
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
-
-  # resources :referrals do
-  #   resources :doctors
-  # end
 
 end

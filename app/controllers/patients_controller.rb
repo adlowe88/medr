@@ -11,12 +11,21 @@ class PatientsController < ApplicationController
     else
       render :new
     end
-
   end
 
-  def home
+  def edit
     @patient = Patient.find_by :id => session[:patient_id]
   end
+
+  def update
+    patient = Patient.find_by :id => session[:patient_id]
+    patient.update patient_params
+    redirect_to patient_path
+  end
+
+  # def home
+  #   @patient = Patient.find_by :id => session[:patient_id]
+  # end
 
   def check_referral
   end
@@ -30,7 +39,7 @@ class PatientsController < ApplicationController
 
   private
   def patient_params
-    params.require(:patient).permit(:email, :password_digest, :password_digest_confirmation)
+    params.require(:patient).permit(:name, :dob, :phone, :address, :medicare, :health_fund, :email, :password_digest, :password_digest_confirmation)
   end
 
 end

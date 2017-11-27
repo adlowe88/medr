@@ -11,12 +11,12 @@ class SessionController < ApplicationController
     if patient.present? && patient.authenticate(params[:password])
       session[:patient_id] = patient.id
       # if login successful redirect to patient home page
-      redirect_to home_patients_path
+      redirect_to patient
     #If there is a doctor present, check password
     elsif doctor.present? && doctor.authenticate(params[:password])
       session[:doctor_id] = doctor.id
       # if login successful redirect to doctor home page
-      redirect_to home_doctors_path
+      redirect_to doctor
     else
       #Otherwise prompt login again
       redirect_to login_path
