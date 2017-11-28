@@ -1,1 +1,9 @@
 <h1>Check your REFERRALS</h1>
+
+
+<% @patient.referrals.each do | referral | %>
+  <ul>
+    <!-- <li>From: <%= referral.referrer.name %></li> -->
+    <li><%= link_to "Referral from #{referral.referee.name}", show_referral_patients_path(referral.id) %></li>
+  </ul>
+<% end %>

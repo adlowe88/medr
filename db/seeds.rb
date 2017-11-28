@@ -32,8 +32,3 @@ Referral.destroy_all
 r1 = Referral.create
 r2 = Referral.create
 r3 = Referral.create
-r4 = Referral.create
-r5 = Referral.create
-r6 = Referral.create
-r7 = Referral.create
-r8 = Referral.create

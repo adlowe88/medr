@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'check_referral', :to => "patients/check_referral"
       get 'pending_requests', :to => "patients/pending_requests"
       get 'account_settings', :to => "patients/account_settings"
+      get 'show_referral', :to => "patients/show_referral"
     end
   end
 

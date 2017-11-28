@@ -4,6 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  time        :text
+#  body        :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  patient_id  :integer

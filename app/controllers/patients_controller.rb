@@ -26,6 +26,17 @@ class PatientsController < ApplicationController
   # def home
   #   @patient = Patient.find_by :id => session[:patient_id]
   # end
+  def check_referral
+
+    @patient = Patient.find session[:patient_id]
+    # raise 'hell'
+
+  end
+
+  def show_referral
+    @referral = Referral.find params[:format]
+    # raise 'hell'
+  end
 
   def pending_requests
   end

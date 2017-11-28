@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20171127231858) do
 
   create_table "referrals", force: :cascade do |t|
     t.text "time"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "patient_id"

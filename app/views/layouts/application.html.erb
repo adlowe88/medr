@@ -11,9 +11,10 @@
 
 <body>
 
-  <div class="container">
+  <div class="button-container">
 
   <!-- Trigger the modal with a button -->
+  <!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign In</button>
 
   <!-- Modal -->
@@ -27,7 +28,18 @@
           <h4 class="modal-title">Enter your login details</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+
+
+          <%= form_tag login_path do %>
+            <%= label_tag :email %>
+            <%= email_field_tag :email %>
+
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+
+            <%= submit_tag "Login" %>
+          <% end %>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -36,6 +48,83 @@
 
     </div>
   </div>
+
+<!-- Trigger the modal with a button -->
+<!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-2">Patient Sign Up</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-2" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Hello, New Patient</h4>
+      </div>
+      <div class="modal-body">
+
+      <%= form_for Patient.new do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+
+        <%= f.submit "New Patient" %>
+      <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Trigger the modal with a button -->
+<!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-3">Doctor Sign Up</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-3" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Welcome, Doc!</h4>
+      </div>
+      <div class="modal-body">
+
+        <%= form_for Doctor.new do |f| %>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+
+          <%= f.submit "New Doctor" %>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 </div>
 
@@ -46,10 +135,9 @@
       <section class="section parallax bg1">
         <nav class="home-nav">
           <h3>Welcome to MeDr</h3>
-          <%= link_to 'Home', root_path %>
-          <%= link_to 'Patient Sign Up', new_patient_path%>
-          <%= link_to 'Doctor Sign Up', new_doctor_path%>
-          <%= link_to 'Sign In', login_path %>
+          <!-- <%= link_to 'Home', root_path %> -->
+          <!-- <%= link_to 'Patient Sign Up', new_patient_path%> -->
+          <!-- <%= link_to 'Doctor Sign Up', new_doctor_path%> -->
           <!-- <%= link_to 'Sign Out', login_path, :method => 'delete' %> -->
         </nav>
       </section>

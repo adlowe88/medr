@@ -4,7 +4,7 @@
 <% @doctor.sent_referrals.each do | referral | %>
   <ul>
     <!-- <li><%= referral.patient_id%></li> -->
-    <li><%= referral.referee.name %></li>
+    <li><%= link_to "Referral to #{referral.referee.name}", show_referral_patients_path(referral.id) %></li>
   </ul>
 <% end %>
 
@@ -12,6 +12,6 @@
 
 <% @doctor.received_referrals.each do | referral | %>
   <ul>
-    <li><%= referral.referrer.name %></li>
+    <li><%= link_to "Referral from #{referral.referrer.name}", show_referral_patients_path(referral.id) %></li>
   </ul>
 <% end %>
