@@ -1,11 +1,17 @@
 <h1>This is a list of YOUR REFERRALS DOC !</h1>
 
-<% @referrals.each do | referral | %>
+<h3>To:</h3>
+<% @doctor.sent_referrals.each do | referral | %>
   <ul>
-    <!-- creating a link to /artist/:id       artist_path(artist.id) -->
-    <!-- ie. artist.name link to artist show page -->
     <!-- <li><%= referral.patient_id%></li> -->
-    <li><%= referral[:patient_id] %></li>
-    <li><%= referral[:time] %></li>
+    <li><%= referral.referee.name %></li>
+  </ul>
+<% end %>
+
+<h3>From:</h3>
+
+<% @doctor.received_referrals.each do | referral | %>
+  <ul>
+    <li><%= referral.referrer.name %></li>
   </ul>
 <% end %>
