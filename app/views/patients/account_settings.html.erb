@@ -1,4 +1,4 @@
-<header class="header-nav">
+<header class="patient-header">
   <h2>Manage your account settings</h2>
 
   <nav class="patient-nav">
@@ -14,44 +14,44 @@
 
 <%= form_for @patient do | f | %>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :name  %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :dob %>
-    <%= f.text_field :dob %>
+    <%= f.text_field :dob, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :phone %>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :address %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :medicare %>
-    <%= f.text_field :medicare %>
+    <%= f.text_field :medicare, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :health_fund %>
-    <%= f.text_field :health_fund %>
+    <%= f.text_field :health_fund, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => "form-control" %>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <%= f.submit %>
   </fieldset>
 <% end %>
 
-<%= button_to 'Delete Account', patient_path(@patient.id), :method => 'delete' %>
+<%= button_to 'Delete Account', patient_path(@patient.id), :method => 'delete', :class => "button-delete" %>

@@ -12,24 +12,29 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Enter your login details</h4>
         </div>
-      <div class="modal-body">
+        <div class="modal-body">
 
-          <%= form_tag login_path do %>
-            <%= label_tag :email %>
-            <%= email_field_tag :email %>
+          <%= form_tag login_path, :class => "form-inline" do %>
+            <fieldset class="form-group">
+              <%= label_tag :email %>
+              <%= email_field_tag :email %>
+            </fieldset>
 
-            <%= label_tag :password %>
-            <%= password_field_tag :password %>
+            <fieldset class="form-group">
+              <%= label_tag :password %>
+              <%= password_field_tag :password %>
+            </fieldset>
 
-            <%= submit_tag "Login" %>
+            <fieldset class="form-group">
+              <%= submit_tag "Login" %>
+            </fieldset>
           <% end %>
 
-      </div>
-      <div class="modal-footer">
+        </div>
+        <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -44,23 +49,31 @@
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
       <h4 class="modal-title">Hello, New Patient</h4>
-    </div>
-    <div class="modal-body">
-
-      <%= form_for Patient.new do |f| %>
-        <%= f.label :email %>
-        <%= f.email_field :email %>
-
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "New Patient" %>
-      <% end %>
-
       </div>
+      <div class="modal-body">
+
+        <%= form_for Patient.new do |f| %>
+          <fieldset class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, :class => "form-control" %>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, :class => "form-control"  %>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, :class => "form-control"  %>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <%= f.submit "New Patient" %>
+          </fieldset>
+        <% end %>
+
+        </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
@@ -80,22 +93,30 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Welcome, Doc!</h4>
-      </div>
-      <div class="modal-body">
+          <h4 class="modal-title">Welcome, Doc!</h4>
+        </div>
+        <div class="modal-body">
 
-        <%= form_for Doctor.new do |f| %>
-          <%= f.label :email %>
-          <%= f.email_field :email %>
+          <%= form_for Doctor.new do |f| %>
+            <fieldset class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, :class => "form-control" %>
+            </fieldset>
 
-          <%= f.label :password %>
-          <%= f.password_field :password %>
+            <fieldset class="form-group">
+              <%= f.label :password %>
+              <%= f.password_field :password, :class => "form-control" %>
+            </fieldset>
 
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation %>
+            <fieldset class="form-group">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, :class => "form-control" %>
+            </fieldset>
 
-          <%= f.submit "New Doctor" %>
-        <% end %>
+            <fieldset class="form-group">
+              <%= f.submit "New Doctor" %>
+            </fieldset>
+          <% end %>
 
         </div>
         <div class="modal-footer">

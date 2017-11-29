@@ -12,18 +12,18 @@
 
 
 
-<h3>To:</h3>
+<h3 class="doc_sent">To</h3>
 <% @doctor.sent_referrals.each do | referral | %>
-  <ul>
+  <ul class="list-group">
     <!-- <li><%= referral.patient_id%></li> -->
-    <li><%= link_to "Referral to #{referral.referee.name}", show_referral_patients_path(referral.id) %></li>
+    <li class="list-group-item"><%= link_to "Referral to #{referral.referee.name}", show_referral_patients_path(referral.id) %></li>
   </ul>
 <% end %>
 
-<h3>From:</h3>
+<h3 class="doc_received">From</h3>
 
 <% @doctor.received_referrals.each do | referral | %>
-  <ul>
-    <li><%= link_to "Referral from #{referral.referrer.name}", show_referral_patients_path(referral.id) %></li>
+  <ul class="list-group">
+    <li class="list-group-item"><%= link_to "Referral from #{referral.referrer.name}", show_referral_patients_path(referral.id) %></li>
   </ul>
 <% end %>

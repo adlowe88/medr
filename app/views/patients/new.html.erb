@@ -8,14 +8,22 @@
 <% end %>
 
 <%= form_for @patient do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <fieldset class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, :class => "form-control" %>
+  </fieldset>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <fieldset class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => "form-control"  %>
+  </fieldset>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <fieldset class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => "form-control"  %>
+  </fieldset>
 
-  <%= f.submit "New Patient" %>
+  <fieldset class="form-group">
+    <%= f.submit "New Patient", :class = > "btn btn-default" %>
+  </fieldset>
 <% end %>
