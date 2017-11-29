@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Raleway');
+
+// font-family: 'Lobster', cursive;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Josefin Slab', serif;
+
 .list-group {
   width: 15%;
   margin-left: 42%;
@@ -127,7 +133,7 @@ iframe {
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
-  background-image: url('computer2.jpg');
+  background-image: url('computer2copy2.jpg');
 }
 
 .bg2::after {
@@ -136,7 +142,11 @@ iframe {
 
 
 .button-container {
+  font-family: 'Raleway', sans-serif;
   display: inline-block;
+  position: absolute;
+  top: 8%;
+  left: 39%;
 }
 
 .scroll-down {
@@ -156,16 +166,21 @@ iframe {
 }
 
 .about {
+  font-family: 'Raleway', sans-serif;
   position: absolute;
   top: 15%;
   left: 10%;
   width: 33%;
   height: 80%;
   font-size: 17px;
+  line-height: 2em;
 }
 
 #welcome {
   // transform: rotateX(-1deg);
-  font-size: 40px;
-
+  font-size: 90px;
+  padding-left: 8px;
+  padding-bottom: 18px;
+  font-family: 'Lobster', cursive;
+  font-weight: 600;
 }
