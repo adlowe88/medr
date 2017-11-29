@@ -1,12 +1,14 @@
-<h1>Create a new referral!!</h1>
+<header class="doctor-header">
+  <h2 class="doctor-heading">Create a new referral</h2>
 
-<nav>
-  <%= link_to "Return home Doc!", doctor_path(session[:doctor_id]) %>
-  <%= link_to "Create Referral", new_doctor_referral_path(session[:doctor_id])%>
-  <%= link_to "Referrals List", doctor_referrals_path(session[:doctor_id]) %>
-  <%= link_to "Account Settings", account_settings_doctors_path%>
-  <%= link_to 'Sign Out', login_path, :method => 'delete' %>
-</nav>
+  <nav class="doctor-nav">
+    <%= link_to "Return home Doc!", doctor_path(session[:doctor_id]) %>
+    <%= link_to "Create Referral", new_doctor_referral_path(session[:doctor_id])%>
+    <%= link_to "Referrals List", doctor_referrals_path(session[:doctor_id]) %>
+    <%= link_to "Account Settings", account_settings_doctors_path%>
+    <%= link_to 'Sign Out', login_path, :method => 'delete' %>
+  </nav>
+</header>
 
 
 <%= form_for @referral, url: {action: "create"} do | f | %>

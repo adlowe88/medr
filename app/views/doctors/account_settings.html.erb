@@ -1,48 +1,50 @@
-<h1>Change you ACCOUNT SETTINGS DOC ?</h1>
+<header class="doctor-header">
+  <h2 class="doctor-heading">Account Settings</h2>
 
-<nav>
-  <%= link_to "Return home Doc!", doctor_path(session[:doctor_id]) %>
-  <%= link_to "Create Referral", new_doctor_referral_path(session[:doctor_id])%>
-  <%= link_to "Referrals List", doctor_referrals_path(session[:doctor_id]) %>
-  <%= link_to "Account Settings", account_settings_doctors_path%>
-  <%= link_to 'Sign Out', login_path, :method => 'delete' %>
-</nav>
+  <nav class="doctor-nav">
+    <%= link_to "Return home Doc!", doctor_path(session[:doctor_id]) %>
+    <%= link_to "Create Referral", new_doctor_referral_path(session[:doctor_id])%>
+    <%= link_to "Referrals List", doctor_referrals_path(session[:doctor_id]) %>
+    <%= link_to "Account Settings", account_settings_doctors_path%>
+    <%= link_to 'Sign Out', login_path, :method => 'delete' %>
+  </nav>
+</header>
 
 <%= form_for @doctor do | f | %>
 
-  <fieldset>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, :class => "form-control" %>
+    </fieldset>
 
-  <fieldset>
-    <%= f.label :provider_number%>
-    <%= f.text_field :provider_number%>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :provider_number%>
+      <%= f.text_field :provider_number, :class => "form-control" %>
+    </fieldset>
 
-  <fieldset>
-    <%= f.label :phone%>
-    <%= f.text_field :phone %>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :phone%>
+      <%= f.text_field :phone, :class => "form-control"  %>
+    </fieldset>
 
-  <fieldset>
-    <%= f.label :dob%>
-    <%= f.text_field :dob %>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :dob%>
+      <%= f.text_field :dob, :class => "form-control"  %>
+    </fieldset>
 
-  <fieldset>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, :class => "form-control"  %>
+    </fieldset>
 
-  <fieldset>
-    <%= f.label :email %>
-    <%= f.text_field :email%>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, :class => "form-control" %>
+    </fieldset>
 
-  <fieldset>
-    <%= f.submit %>
-  </fieldset>
+    <fieldset class="form-group">
+      <%= f.submit%>
+    </fieldset>
 <% end %>
 
-<%= button_to 'Delete Account', doctor_path(@doctor.id), :method => 'delete' %>
+<%= button_to 'Delete Account', doctor_path(@doctor.id), :method => 'delete', :class => "button-delete"%>

@@ -1,12 +1,15 @@
-<h1>Manage your account settings</h1>
+<header class="header-nav">
+  <h2>Manage your account settings</h2>
 
-<nav>
-  <%= link_to "Return home!", patient_path(session[:patient_id])%>
-  <%= link_to "Your Referrals", check_referral_patients_path %>
-  <%= link_to "Pending Requests", pending_requests_patients_path%>
-  <%= link_to "Account Settings", account_settings_patients_path%>
-  <%= link_to 'Sign Out', login_path, :method => 'delete' %>
-</nav>
+  <nav class="patient-nav">
+    <%= link_to "Home", patient_path(session[:patient_id])%>
+    <%= link_to "Your Referrals", check_referral_patients_path %>
+    <%= link_to "Pending Requests", pending_requests_patients_path%>
+    <%= link_to "Account Settings", account_settings_patients_path%>
+    <%= link_to 'Sign Out', login_path, :method => 'delete' %>
+  </nav>
+</header>
+
 
 
 <%= form_for @patient do | f | %>
