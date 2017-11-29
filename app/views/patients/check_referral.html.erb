@@ -65,12 +65,13 @@
     var search = $("#search").val();
     var wikiSearch = "https://en.wikipedia.org/wiki/" + search;
     // window.location.href = wikiSearch;
-    $("iframe").css("display", "inherit")
+    $("iframe").css("display", "inherit");
     $("iframe").attr("src", wikiSearch);
   });
 
   $(".button-container > button").on('click', function () {
-    console.log(`working`);
-    $("iframe").removeAttr("src")
+    $("iframe").css("display", "none");
+    $("iframe").removeAttr("src");
+    $("#search").val("");
   });
 </script>
