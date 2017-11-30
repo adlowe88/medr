@@ -4,6 +4,104 @@
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Josefin Slab', serif;
 
+// Show a referral
+
+.button-container-referral {
+  text-align: center;
+  margin-left: -3%;
+}
+
+#ref-number {
+  font-size: 33px;
+  font-family: 'Lobster', cursive;
+  font-weight: 800;
+  color: #337ab7;
+}
+
+#ref-modal {
+  background-color: #F8ECC2;
+  // width: 120%;
+}
+
+.show-referral ul li {
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 23px;
+  padding: 8px 0;
+  text-align: center;
+  margin-left: -33px;
+}
+
+.show-referral span {
+  padding-right: 8px;
+}
+
+.show-referral textarea {
+  height: 120px;
+  width: 90%;
+}
+
+#bloodhound {
+  height: 120px;
+  padding-top: 23px;
+}
+
+#bloodhound button {
+  margin-top: 15px;
+  margin-left: 38%;
+  padding: 4px 32px;
+}
+
+#bloodhound input {
+  height: 43px;
+  text-align: center;
+}
+
+
+
+//Create a new referral
+fieldset {
+  padding-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+.dropdown {
+  display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.dropdown span {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+#collect-select select {
+  width: 180px;
+}
+
+#ref-patient select {
+  width: 180px;
+
+}
+
+#ref-patientId select {
+  width: 60px;
+}
+
+#collect-select {
+  margin-left: 26.9%;
+}
+
+#submit-ref input {
+  margin-left: 40%;
+}
+
+#ref-comments textarea {
+  height: 300px;
+}
+
 footer {
   background: #73aeff;
   position: absolute;
@@ -53,12 +151,17 @@ footer {
   margin-left: 25%;
 }
 
+.form-control {
+  font-size: 16px;
+}
+
 .button-delete {
   margin-left: 25%;
 }
 
 body {
   background-color: #DBDBDB;
+  font-size: 16px;
   // background-image: url('https://panexplore.com/wp-content/uploads/2015/02/exploring-mindset.jpg');
 }
 
@@ -68,31 +171,44 @@ iframe {
   display: none;
 }
 
-.patient-nav {
-  text-align: center;
-  font-size: 18px;
-  padding-bottom: 50px;
-}
-
 .patient-header h2 {
-  text-align: center;
   font-family: 'Lobster', cursive;
-}
-
-.doctor-header h2 {
+  font-size: 45px;
   text-align: center;
-  font-family: 'Lobster', cursive;
+  padding-bottom: 30px;
+  margin-top: 50px;
 }
 
 .doctor-heading {
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+
+.patient-nav {
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 50px;
+  font-weight: 650;
 }
 
 .doctor-nav {
+  font-family: 'Josefin Slab', serif;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
   padding-bottom: 50px;
+  font-weight: 650;
+}
+
+.patient-nav a {
+  padding: 0 10px;
+}
+
+.doctor-nav a {
+  padding: 0 10px;
 }
 
 .button-container {

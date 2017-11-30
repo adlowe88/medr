@@ -13,36 +13,35 @@
 
 <%= form_for @referral, url: {action: "create"} do | f | %>
 
-  Recipient:
-  <%= f.collection_select(:referee_id, Doctor.all, :id, :name) %>
 
-  <fieldset>
-    When:
-    <%= f.text_field :time%>
+  <!-- (Object, method, collection, value_method) -->
+  <fieldset id="collect-select" class="dropdown">
+    <span>Recipient</span>
+    <%= f.collection_select(:referee_id, Doctor.all, :id, :name, :include_blank => true) %>
+  </fieldset>
+
+  <fieldset id="ref-patient" class="dropdown">
+    <span>For</span>
+    <%= f.select :patient_id, Patient.pluck(:name, :id), :include_blank => true, :class => "form-control" %>
+  </fieldset>
+
+  <fieldset id="ref-patientId" class="dropdown">
+    <span>Patient ID#</span>
+    <%= f.select :patient_id, Patient.pluck(:id), :include_blank => true, :class => "form-control" %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <span>When</span>
+    <%= f.text_field :time , :class => "form-control"%>
   </fieldset>
 
 
-  <fieldset>
-    For:
-    <%= f.select :patient_id, Patient.pluck(:name, :id), :include_blank => true %>
+  <fieldset class="form-group" id="ref-comments">
+    <span>Comments</span>
+    <%= f.text_area :body, :name => "Comments",  :class => "new-textarea form-control"%>
   </fieldset>
 
-  <fieldset>
-    Patient ID#:
-    <%= f.select :patient_id, Patient.pluck(:id), :include_blank => true %>
-  </fieldset>
-
-  <!-- Conditions:
-  <fieldset>
-    <%= f.text_field :conditions%>
-  </fieldset> -->
-
-  Comments:
-  <fieldset>
-    <%= f.text_area :body, :name => "Comments"%>
-  </fieldset>
-
-  <fieldset>
-    <%= f.submit "Create Referral" %>
+  <fieldset class="form-group" id="submit-ref">
+    <%= f.submit "Create Referral"%>
   </fieldset>
 <% end %>

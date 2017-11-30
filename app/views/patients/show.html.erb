@@ -1,8 +1,7 @@
 <header class="patient-header">
-  <h2>This is the PATIENT HOME PAGE</h2>
+  <h2>Hello, <%= @patient.name %></h2>
 
   <nav class="patient-nav">
-    <%= link_to "Return home!", patient_path%>
     <%= link_to "Your Referrals", check_referral_patients_path %>
     <%= link_to "Pending Requests", pending_requests_patients_path%>
     <%= link_to "Account Settings", account_settings_patients_path%>

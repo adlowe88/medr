@@ -13,6 +13,10 @@ class PatientsController < ApplicationController
     end
   end
 
+  def show
+    @patient = Patient.find_by :id => session[:patient_id]
+  end
+
   def edit
     @patient = Patient.find_by :id => session[:patient_id]
   end

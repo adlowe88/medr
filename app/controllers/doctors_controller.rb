@@ -32,7 +32,7 @@ class DoctorsController < ApplicationController
   end
 
   def show
-    doctor = Doctor.find_by :id => session[:doctor_id]
+    @doctor = Doctor.find_by :id => session[:doctor_id]
   end
 
   # def home
