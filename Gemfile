@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'bootstrap-typeahead-rails'
 gem 'nokogiri'
 gem 'mediawiki_api'
 gem 'rails_12factor', group: :production

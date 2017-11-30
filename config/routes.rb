@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
 
+  #typeahead
+  get 'things/typeahead/:query' => 'things#typeahead'
+
 #if someone makes a get request from patient/referrals#forpatient
 
   resources :patients do

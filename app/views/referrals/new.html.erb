@@ -32,9 +32,14 @@
     <%= f.select :patient_id, Patient.pluck(:id), :include_blank => true %>
   </fieldset>
 
-  Issues:
+  <!-- Conditions:
   <fieldset>
-    <%= f.text_area :body, :name => "Issues"%>
+    <%= f.text_field :conditions%>
+  </fieldset> -->
+
+  Comments:
+  <fieldset>
+    <%= f.text_area :body, :name => "Comments"%>
   </fieldset>
 
   <fieldset>
