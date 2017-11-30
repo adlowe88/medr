@@ -4,6 +4,15 @@
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Josefin Slab', serif;
 
+.login-content {
+  width: 720px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: space-around;
+}
+
 .list-group {
   width: 15%;
   margin-left: 42%;
@@ -178,6 +187,9 @@ iframe {
 
 #welcome {
   // transform: rotateX(-1deg);
+  // position: absolute;
+  // top: 50px;
+  // left: 400px;
   font-size: 90px;
   padding-left: 8px;
   padding-bottom: 18px;
