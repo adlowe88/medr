@@ -39,6 +39,7 @@ class PatientsController < ApplicationController
   end
 
   def pending_requests
+
   end
 
   def account_settings

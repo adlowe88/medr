@@ -13,4 +13,5 @@
 //= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
+= require formvalidation.min
 //= require_tree .

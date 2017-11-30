@@ -15,13 +15,19 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
+    <footer>
+      <p>Created by Damien Lowe at WDI24 2017</p>
+    </footer>
   </section>
 </main>
+
+
+
 
 <div class="button-container">
   <!-- Trigger the modal with a button -->
   <!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-3">Doctor Sign Up</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-3" id="togglebutton">Doctor Sign Up</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal-3" role="dialog">
@@ -34,7 +40,7 @@
           </div>
           <div class="modal-body">
 
-            <%= form_for Doctor.new do |f| %>
+            <%= form_for Doctor.new, :url => login_path, :method => "post", html: {id: "signupForm"}, remote: true do |f| %>
               <fieldset class="form-group">
                 <%= f.label :email %>
                 <%= f.email_field :email, :class => "form-control" %>
@@ -42,7 +48,7 @@
 
               <fieldset class="form-group">
                 <%= f.label :password %>
-                <%= f.password_field :password, :class => "form-control" %>
+                <%= f.password_field :password, :class => "form-control", :name => "password" %>
               </fieldset>
 
               <fieldset class="form-group">
@@ -54,6 +60,8 @@
                 <%= f.submit "New Doctor" %>
               </fieldset>
             <% end %>
+            <div id="errors"></div>
+
 
           </div>
           <div class="modal-footer">
@@ -64,7 +72,7 @@
     </div>
 <!-- Trigger the modal with a button -->
 <!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign In</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="togglebutton">Sign In</button>
 
 <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -102,7 +110,8 @@
 </div>
 
 <!-- Trigger the modal with a button -->
-<!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> --><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-2">Patient Sign Up</button>
+<!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-2" id="togglebutton">Patient Sign Up</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal-2" role="dialog">
@@ -143,13 +152,62 @@
     </div>
   </div>
 </div>
-
-
-
 </div>
 
 
 <a href="#" class="scroll-down">
   <i class="icon"></i>
-  <span>scroll down</span>
+  <span id="scroller">scroll down</span>
 </a>
+
+<script>
+
+  $(document).ready(function () {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+          $(".button-container").css({
+            'display': 'none'
+        });
+      }
+    });
+  });
+
+  $(window).on("scroll", function() {
+	var scrollHeight = $(document).height();
+	var scrollPosition = $(window).height() + $(window).scrollTop();
+	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+	   $('#scroller').value("THIS IS THE END!");
+	}
+});
+
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#signupForm').formValidation({
+        framework: 'bootstrap',
+        excluded: ':disabled',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email is required'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required'
+                    }
+                }
+            }
+        }
+    });
+});
+</script>

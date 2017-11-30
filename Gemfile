@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'formvalidation-rails'
 gem 'bootstrap-typeahead-rails'
 gem 'nokogiri'
 gem 'mediawiki_api'

@@ -72,6 +72,9 @@ GEM
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
+    formvalidation-rails (0.8.1)
+      jquery-rails (>= 3.0)
+      railties (>= 3.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -204,6 +207,7 @@ DEPENDENCIES
   bootstrap-typeahead-rails
   byebug
   coffee-rails (~> 4.2)
+  formvalidation-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
