@@ -18,4 +18,5 @@ class Referral < ApplicationRecord
   belongs_to :referrer, class_name: "Doctor", :optional => true
   belongs_to :referee, class_name: "Doctor", :optional => true
 
+  has_and_belongs_to_many :conditions, :optional => true
 end
