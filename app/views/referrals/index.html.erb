@@ -10,20 +10,121 @@
   </nav>
 </header>
 
+<div class="sent-received">
+  <h3 class="doc_received">From</h3>
+  <% @doctor.received_referrals.each do | referral | %>
 
+    <ul>
 
-<h3 class="doc_sent">To</h3>
-<% @doctor.sent_referrals.each do | referral | %>
+      <!-- <li>From: <%= referral.referrer.name %></li> -->
+      <!-- <li><%= link_to "Referral from #{referral.referee.name}", show_referral_patients_path(referral.id) %></li> -->
+      <div class="button-container-referral">
+      <!-- Trigger the modal with a button -->
+      <!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
+      <button type="button" class="btn btn-info btn-lg ref-list-button" data-toggle="modal" data-target="#myModal<%= referral.id %>"><%= "#{referral.referrer.name}" %></button>
+
+      <!-- Modal -->
+        <div class="modal fade" id="myModal<%= referral.id %>" role="dialog">
+          <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content" id="ref-modal">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="ref-number">Referral #<%="#{referral.id}" %></h4>
+              </div>
+            <div class="modal-body">
+
+              <div class="show-referral">
+                <ul>
+                  <li><span>To:</span> <%= referral.referee.name %></li>
+                  <li>From: <%= referral.referrer.name %></li>
+
+                  <li><span>For:</span> <%= referral.patient.name %></li>
+                  <li><span>When:</span> <%= referral.time %></li>
+
+                  <li>Concerns:</li>
+                  <textarea id="ref-textarea"><%= referral.body%></textarea>
+                </ul>
+              </div>
+
+              <form id="bloodhound">
+                <input class="form-control typeahead" type="text" id="referral-search" placeholder="Enter your search term">
+                <button type="submit" data-provide="typeahead">Search</button>
+              </form>
+
+              <iframe></iframe>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </ul>
+  <% end %>
+
+  <h3 class="doc_sent">To</h3>
+  <% @doctor.sent_referrals.each do | referral | %>
+
+    <ul>
+
+      <!-- <li>From: <%= referral.referrer.name %></li> -->
+      <!-- <li><%= link_to "Referral from #{referral.referee.name}", show_referral_patients_path(referral.id) %></li> -->
+      <div class="button-container-referral">
+      <!-- Trigger the modal with a button -->
+      <!-- <%= button_to 'Sign In', login_path, :data => {:toggle => "modal", :target => "#myModal"}, :class => "btn btn-info btn-lg"%> -->
+      <button type="button" class="btn btn-info btn-lg ref-list-button" data-toggle="modal" data-target="#myModal<%= referral.id %>"><%= "#{referral.referee.name}" %></button>
+
+      <!-- Modal -->
+        <div class="modal fade" id="myModal<%= referral.id %>" role="dialog">
+          <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content" id="ref-modal">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="ref-number">Referral #<%="#{referral.id}" %></h4>
+              </div>
+            <div class="modal-body">
+
+              <div class="show-referral">
+                <ul>
+                  <li><span>To:</span> <%= referral.referee.name %></li>
+                  <li>From: <%= referral.referrer.name %></li>
+
+                  <li><span>For:</span> <%= referral.patient.name %></li>
+                  <li><span>When:</span> <%= referral.time %></li>
+
+                  <li>Concerns:</li>
+                  <textarea id="ref-textarea"><%= referral.body%></textarea>
+                </ul>
+              </div>
+
+              <form id="bloodhound">
+                <input class="form-control typeahead" type="text" id="referral-search" placeholder="Enter your search term">
+                <button type="submit" data-provide="typeahead">Search</button>
+              </form>
+
+              <iframe></iframe>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </ul>
+  <% end %>
+</div>
+
+<!-- <% @doctor.sent_referrals.each do | referral | %>
   <ul class="list-group">
-    <!-- <li><%= referral.patient_id%></li> -->
+    <li><%= referral.patient_id%></li>
     <li class="list-group-item"><%= link_to "Referral to #{referral.referee.name}", show_referral_patients_path(referral.id) %></li>
   </ul>
-<% end %>
-
-<h3 class="doc_received">From</h3>
-
-<% @doctor.received_referrals.each do | referral | %>
-  <ul class="list-group">
-    <li class="list-group-item"><%= link_to "Referral from #{referral.referrer.name}", show_referral_patients_path(referral.id) %></li>
-  </ul>
-<% end %>
+<% end %> -->

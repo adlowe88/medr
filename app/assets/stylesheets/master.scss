@@ -4,7 +4,40 @@
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Josefin Slab', serif;
 
-// Show a referral
+
+
+/////////////////////////////// Show a referral///////////////////////////
+
+.typeahead {
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.ref-list-button {
+  width: 150px;
+}
+
+textarea {
+  margin-right: 7%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 1.428571429;
+  height: 34px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 1.428571429;
+  height: 34px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.modal-content {
+  background-color: #F8ECC2;
+  pading-right: 10px;
+}
 
 .button-container-referral {
   text-align: center;
@@ -19,9 +52,9 @@
 }
 
 #ref-modal {
-  background-color: #F8ECC2;
-  // width: 120%;
+  width: 120%;
 }
+
 
 .show-referral ul li {
   list-style-type: none;
@@ -29,7 +62,7 @@
   font-size: 23px;
   padding: 8px 0;
   text-align: center;
-  margin-left: -33px;
+  margin-left: -8%;
 }
 
 .show-referral span {
@@ -37,6 +70,7 @@
 }
 
 .show-referral textarea {
+  margin-top: 23px;
   height: 120px;
   width: 90%;
 }
@@ -48,7 +82,7 @@
 
 #bloodhound button {
   margin-top: 15px;
-  margin-left: 38%;
+  margin-left: 1%;
   padding: 4px 32px;
 }
 
@@ -58,8 +92,8 @@
 }
 
 
+/////////////////////////////Create a new referral/////////////////////////
 
-//Create a new referral
 fieldset {
   padding-bottom: 20px;
   font-family: 'Raleway', sans-serif;
@@ -102,6 +136,13 @@ fieldset {
   height: 300px;
 }
 
+
+//////////////////////Home page///////////////////////////
+
+.mod-head {
+  font-family: 'Lobster', cursive;
+}
+
 footer {
   background: #73aeff;
   position: absolute;
@@ -113,11 +154,7 @@ footer {
 }
 
 .modal-title {
-  font-size: 25px;
-}
-.typeahead {
-  width: 550px;
-
+  font-size: 33px;
 }
 
 .login-content {
@@ -127,6 +164,19 @@ footer {
 .login-form {
   display: flex;
   justify-content: space-around;
+  padding-top: 18px;
+}
+
+.login-form label {
+  padding-right: 5px;
+}
+
+.login-form fieldset input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 1.428571429;
+  height: 34px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 .list-group {
@@ -135,15 +185,19 @@ footer {
   text-align: center;
 }
 
+
+
 .doc_sent {
   margin-left: 25%;
-  margin-left: 48%;
+  margin-left: 49%;
+  margin-bottom: 2%;
+  margin-top: 8%;
 }
 
 .doc_received {
-  padding-top: 33px;
-  margin-left: 25%;
-  margin-left: 47%;
+  padding-top: 23px;
+  margin-bottom: 2%;
+  margin-left: 48%;
 }
 
 .form-group {
@@ -155,8 +209,14 @@ footer {
   font-size: 16px;
 }
 
+.fsubmit input {
+  text-align: center;
+  border: 1px solid transparent;
+}
+
 .button-delete {
   margin-left: 25%;
+  margin-bottom: 5%;
 }
 
 body {
