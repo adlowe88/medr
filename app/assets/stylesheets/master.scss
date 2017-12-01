@@ -8,7 +8,8 @@
 
 /////////////////////////////// Show a referral///////////////////////////
 
-.typeahead {
+
+.typeahead1 {
   padding: 5px 15px;
   width: 100%;
 }
@@ -81,6 +82,8 @@ textarea {
 }
 
 #bloodhound button {
+  color: white;
+  background-color: #337ab7;
   margin-top: 15px;
   margin-left: 1%;
   padding: 4px 32px;
@@ -138,6 +141,16 @@ fieldset {
 
 
 //////////////////////Home page///////////////////////////
+.home-modal-button input {
+  background-color: #4e91fd;
+  width: 48%;
+  font-size: 19px;
+}
+
+.home-modal-button-sign input {
+  background-color: #4e91fd;
+  font-size: 19px;
+}
 
 .mod-head {
   font-family: 'Lobster', cursive;
@@ -185,8 +198,6 @@ footer {
   text-align: center;
 }
 
-
-
 .doc_sent {
   margin-left: 25%;
   margin-left: 49%;
@@ -210,13 +221,19 @@ footer {
 }
 
 .fsubmit input {
+  width: 23%;
+  color: white;
+  background-color: #337ab7;
   text-align: center;
   border: 1px solid transparent;
 }
 
 .button-delete {
-  margin-left: 25%;
+  margin-left: 26%;
   margin-bottom: 5%;
+  width: 9%;
+  background-color: #FF0000;
+  padding: 3px 0;
 }
 
 body {

@@ -1,0 +1,11 @@
+<header class="patient-header">
+  <h2>Pending Requests</h2>
+
+  <nav class="patient-nav">
+    <%= link_to "Home", patient_path(session[:patient_id])%>
+    <%= link_to "Your Referrals", check_referral_patients_path %>
+    <%= link_to "Pending Requests", pending_requests_patients_path%>
+    <%= link_to "Account Settings", account_settings_patients_path%>
+    <%= link_to 'Sign Out', login_path, :method => 'delete' %>
+  </nav>
+</header>
