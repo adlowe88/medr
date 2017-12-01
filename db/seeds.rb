@@ -9,14 +9,19 @@ p7 = Patient.create :name => "Patient Seven", :dob => "1972-12-18", :address => 
 p8 = Patient.create :name => "Patient Eight", :dob => "1945-03-22", :address => "65 Centennial Park Drive, Sydney", :phone => "0459384723", :medicare => "0394760394", :health_fund => "NIB", :email => "patientEight@gmail.com", :password => "chicken"
 
 Doctor.destroy_all
-d1 = Doctor.create :name => "Doctor One", :provider_number => "423764A", :phone => "91234234", :dob => "1968/02/23", :address => "82 Elizabeth Street, Sydney", :email => "doctorOne@gmail.com", :password => "chicken"
-d2 = Doctor.create :name => "Doctor Two", :provider_number => "928475B", :phone => "92231485", :dob => "1968/02/23", :address => "153 Macquarie Street, Sydney", :email => "doctorTwo@gmail.com", :password => "chicken"
-d3 = Doctor.create :name => "Doctor Three", :provider_number => "957482C", :phone => "98822746", :dob => "1968/02/23", :address => "9 George Street, Sydney", :email => "doctorThree@gmail.com", :password => "chicken"
-d4 = Doctor.create :name => "Doctor Four", :provider_number => "193875D", :phone => "91847263", :dob => "1968/02/23", :address => "3 Foveaux Street, Surry Hills", :email => "doctorFour@gmail.com", :password => "chicken"
-d5 = Doctor.create :name => "Doctor Five", :provider_number => "857364E", :phone => "93378294", :dob => "1968/02/23", :address => "87 Queen Street, Woollhara", :email => "doctorFive@gmail.com", :password => "chicken"
-d6 = Doctor.create :name => "Doctor Six", :provider_number => "109573F", :phone => "92551844", :dob => "1968/02/23", :address => "9 Ward Avenue, Potts Point", :email => "doctorSix@gmail.com", :password => "chicken"
-d7 = Doctor.create :name => "Doctor Seven", :provider_number => "995733G", :phone => "98742212", :dob => "1968/02/23", :address => "77 Dixon Street, Alexandria", :email => "doctorSeven@gmail.com", :password => "chicken"
-d8 = Doctor.create :name => "Doctor Eight", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "doctorEight@gmail.com", :password => "chicken"
+d1 = Doctor.create :name => "Cassandra Essex", :provider_number => "423764A", :phone => "91234234", :dob => "1968/02/23", :address => "82 Elizabeth Street, Sydney", :email => "cassandraessex@gmail.com", :password => "chicken"
+d2 = Doctor.create :name => "Ezra Mizrahi", :provider_number => "928475B", :phone => "92231485", :dob => "1968/02/23", :address => "153 Macquarie Street, Sydney", :email => "ezramizrahi@gmail.com", :password => "chicken"
+d3 = Doctor.create :name => "Joel Turnball", :provider_number => "957482C", :phone => "98822746", :dob => "1968/02/23", :address => "9 George Street, Sydney", :email => "joelturnballe@gmail.com", :password => "chicken"
+d4 = Doctor.create :name => "John Coote", :provider_number => "193875D", :phone => "91847263", :dob => "1968/02/23", :address => "3 Foveaux Street, Surry Hills", :email => "johncoote@gmail.com", :password => "chicken"
+d5 = Doctor.create :name => "Jose Guerrero", :provider_number => "857364E", :phone => "93378294", :dob => "1968/02/23", :address => "87 Queen Street, Woollhara", :email => "joseguerrero@gmail.com", :password => "chicken"
+d6 = Doctor.create :name => "Joshua McEvoy", :provider_number => "109573F", :phone => "92551844", :dob => "1968/02/23", :address => "9 Ward Avenue, Potts Point", :email => "joshuamcevoy@gmail.com", :password => "chicken"
+d7 = Doctor.create :name => "Justin Gan", :provider_number => "995733G", :phone => "98742212", :dob => "1968/02/23", :address => "77 Dixon Street, Alexandria", :email => "justingan@gmail.com", :password => "chicken"
+d8 = Doctor.create :name => "Madeleine Milasis", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "madeleinemilasis@gmail.com", :password => "chicken"
+d9 = Doctor.create :name => "Samantha Cordingley", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "samanthacordingley@gmail.com", :password => "chicken"
+d10 = Doctor.create :name => "Bingshuang Han", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "bingshuanghan@gmail.com", :password => "chicken"
+d11 = Doctor.create :name => "Elizabeth Lai", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "elizabethlai@gmail.com", :password => "chicken"
+d12 = Doctor.create :name => "Sheren To", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "sherento@gmail.com", :password => "chicken"
+d13 = Doctor.create :name => "Christopher Nekich", :provider_number => "987234H", :phone => "92341284", :dob => "1973/01/12", :address => "88 Liverpool Street, Sydney", :email => "christophernekich@gmail.com", :password => "chicken"
 
 Hospital.destroy_all
 h1 = Hospital.create :name => "St Vincent's Hospital", :address => "390 Victoria Street, Darlinghurst", :phone => "83821111", :email => "admin@@svha.org.au"

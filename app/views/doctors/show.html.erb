@@ -1,5 +1,5 @@
 <header class="doctor-header">
-  <h2 class="doctor-heading">Hello, <%= @doctor.name %></h2>
+  <h2 class="doctor-heading">Hello, Dr. <%= @doctor.name %></h2>
 
   <nav class="doctor-nav">
     <%= link_to "Create Referral", new_doctor_referral_path(session[:doctor_id])%>
