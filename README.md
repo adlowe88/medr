@@ -1,7 +1,16 @@
-# README
+# Medr
+Synopsis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Medr (Medical Referrals, Me Dr, MEDR => Medical Returnee)
+
+Medr is the prototype for an online medical referral system  global medical database 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Ruby
+
 
 Things you may want to cover:
 
