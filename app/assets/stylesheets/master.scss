@@ -16,6 +16,8 @@
 
 .ref-list-button {
   width: 150px;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -72,8 +74,12 @@ textarea {
 
 .show-referral textarea {
   margin-top: 23px;
-  height: 120px;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   width: 90%;
+  min-width: 90%;
+  max-width: 90%;
 }
 
 #bloodhound {
@@ -137,6 +143,8 @@ fieldset {
 
 #ref-comments textarea {
   height: 300px;
+  min-height: 300px;
+  max-height: 300px;
 }
 
 
