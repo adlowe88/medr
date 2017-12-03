@@ -1,7 +1,7 @@
 class ReferralsController < ApplicationController
   def new
-    # raise 'hell'
     @referral = Referral.new
+      # raise 'hell'
   end
 
   def index
@@ -42,7 +42,7 @@ class ReferralsController < ApplicationController
   private
   def referral_params
     # .merge -> where the referrer_id is the currently logged doctor
-    params.require(:referral).permit(:referee_id, :patient_id, :time).merge(referrer_id: session[:doctor_id])
+    params.require(:referral).permit(:referee_id, :patient_id, :time, :body).merge(referrer_id: session[:doctor_id])
   end
 
 end
