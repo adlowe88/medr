@@ -167,7 +167,7 @@
       };
     });
 
-    $.getJSON(`https://newsapi.org/v2/everything?q=health&medicine&medical&sources=bbc-news&from=${ date() }&sortBy=popularity&apiKey=c677e35803a54ffca44704f1ff1e7c5d`).done(function (info) {
+    $.getJSON(`https://newsapi.org/v2/everything?q=health&medical&sources=bbc-news&from=${ date() }&sortBy=popularity&apiKey=c677e35803a54ffca44704f1ff1e7c5d`).done(function (info) {
 
       for (let i = 0; i < info.articles.length; i++) {
         //Title and URL link
