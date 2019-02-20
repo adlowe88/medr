@@ -3,7 +3,7 @@ Synopsis
 
 Medr (Medical Referrals, Me Dr, MEDR => Medical Returnee)
 
-Medr is an online medical referral system with a global patient database. 
+Medr is an online medical referral system and patient database. 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
